@@ -1,0 +1,68 @@
+{
+    "manifestVersion": 1,
+    "id": "enformat-vsts-tasks",
+    "name": "Enformat VSTS Tools",
+    "version": "0.0.1",
+    "publisher": "enformat",
+    "public": "true",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "Tools for building or release applications.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "files": [
+        {
+            "path": "Tasks/CopyTask"
+        },
+        {
+            "path": "Tasks/RobocopyTask"
+        },
+        {
+            "path": "Tasks/FtpSynchronization"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "links": {
+        "home": {
+            "uri": "https://github.com/enformat/vsts-tasks"
+        },
+        "getstarted": {
+            "uri": "https://github.com/enformat/vsts-tasks"
+        },
+        "learn": {
+            "uri": "https://github.com/enformat/vsts-tasks"
+        },
+        "support": {
+            "uri": "https://github.com/enformat/vsts-tasks"
+        },
+        "repository": {
+            "uri": "https://github.com/enformat/vsts-tasks.git"
+        },
+        "issues": {
+            "uri": ""
+        }
+    },
+    "contributions": [
+        {
+            "id": "robocopyTask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/RobocopyTask"
+            }
+        }
+    ]
+}

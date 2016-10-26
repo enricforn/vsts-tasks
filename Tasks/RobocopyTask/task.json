@@ -1,0 +1,75 @@
+{
+  "id": "b7143e04-6323-4ad4-ac83-1c0f1d749ad5",
+  "name": "Robocopy",
+  "friendlyName": "Robocopy",
+  "description": "Copy files or folders.",
+  "author": "Vueling",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "version": {
+    "Major": "0",
+    "Minor": "0",
+    "Patch": "1"
+  },
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": false
+    }
+  ],
+  "minimumAgentVersion": "1.89.1",
+  "instanceNameFormat": "Copy files $(files) from $(source) to $(destination)",
+  "inputs": [
+    {
+        "name": "filePath",
+        "type": "filePath",
+        "label": "Source",
+        "defaultValue": "source/path",
+        "helpMarkDown": "Specifies the path to the source directory",
+        "required": true
+    },
+    {
+        "name": "filePath",
+        "type": "filePath",
+        "label": "Destination",
+        "defaultValue": "'dest/path' | [ 'dest/path1', 'dest/path2', ... ]",
+        "helpMarkDown": "Specifies the destination path(s)",
+        "required": true
+    },
+    {
+      "name": "files",
+      "type": "string",
+      "label": "Files",
+      "defaultValue": "",
+      "helpMarkDown": "Regex to use for token replacement. Must include a group match.",
+      "required": true
+    },
+    {
+      "name": "excludedFiles",
+      "type": "string",
+      "label": "Excluded Files",
+      "defaultValue": "",
+      "helpMarkDown": "Excludes files that match the specified names or paths. Note that FileName can include wildcard characters (* and ?). [/xf <FileName>[ ...]]",
+      "groupName": "advanced"
+    },
+    {
+      "name": "excludedDirs",
+      "type": "string",
+      "label": "Excluded Directories",
+      "defaultValue": "",
+      "helpMarkDown": "Excludes directories that match the specified names and paths. [/xd <Directory>[ ...]] ",
+      "groupName": "advanced"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "robocopyTask.js",
+      "argumentFormat": ""
+    }
+  }
+}

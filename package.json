@@ -1,0 +1,31 @@
+{
+  "name": "enformat-vsts-tasks",
+  "version": "0.0.1",
+  "description": "Custom tasks for tfs build service engine",
+  "main": "no_entry_point",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enformat/vsts-tasks.git"
+  },
+  "keywords": [
+    "custom",
+    "task",
+    "build"
+  ],
+  "author": "enricforn",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "vsts-task-lib": "^0.5.6"
+  },
+  "dependencies": {
+    "robocopy": "^0.1.15",
+    "vso-task-lib": "^0.5.5"
+  },
+  "engines": {
+    "node": ">=5.7.0"
+  }
+}
