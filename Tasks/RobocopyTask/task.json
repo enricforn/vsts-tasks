@@ -3,7 +3,7 @@
   "name": "Robocopy",
   "friendlyName": "Robocopy",
   "description": "Copy files or folders.",
-  "author": "Vueling",
+  "author": "Enric Forn",
   "helpMarkDown": "",
   "category": "Utility",
   "visibility": [
