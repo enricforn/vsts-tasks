@@ -1,8 +1,8 @@
 {
-  "name": "enformat-vsts-tasks",
-  "version": "0.0.1",
-  "description": "Custom tasks for tfs build service engine",
-  "main": "no_entry_point",
+  "name": "robocopy",
+  "version": "0.0.5",
+  "description": "Copy files or folders.",
+  "main": "robocopyTask.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,13 +18,8 @@
   "author": "enricforn",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^2.3.3"
   },
   "dependencies": {
-    "robocopy": "^0.1.15",
-    "vsts-task-lib": "^2.0.6",
-    "xml-reader": "^2.4.3",
-    "xmldom": "^0.1.27"
   },
   "engines": {
     "node": ">=5.7.0"

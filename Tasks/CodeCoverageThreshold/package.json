@@ -1,8 +1,8 @@
 {
-  "name": "enformat-vsts-tasks",
-  "version": "0.0.1",
-  "description": "Custom tasks for tfs build service engine",
-  "main": "no_entry_point",
+  "name": "codecoveragethreshold",
+  "version": "0.0.7",
+  "description": "Broke build if code coverage threshold is not overcomed.",
+  "main": "codecoveragethresholdTask.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,14 +17,11 @@
   ],
   "author": "enricforn",
   "license": "ISC",
-  "devDependencies": {
-    "mocha": "^2.3.3"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "robocopy": "^0.1.15",
-    "vsts-task-lib": "^2.0.6",
-    "xml-reader": "^2.4.3",
-    "xmldom": "^0.1.27"
+    "dom-parser": "^0.1.5",
+    "find": "^0.2.7",
+    "vsts-task-lib": "^2.0.7"
   },
   "engines": {
     "node": ">=5.7.0"

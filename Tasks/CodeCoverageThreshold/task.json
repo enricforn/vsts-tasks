@@ -1,0 +1,77 @@
+{
+  "id": "ca1cbe3d-f73e-4526-a01b-d4eb49766b17",
+  "name": "CodeCoverageThreshold",
+  "friendlyName": "Code Coverage Threshold",
+  "description": "Broke build if code coverage threshold is not overcomed.",
+  "author": "Enric Forn",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "visibility": [
+    "Build"
+  ],
+   "runsOn": [
+        "Agent"
+    ],
+  "version": {
+    "Major": "0",
+    "Minor": "0",
+    "Patch": "50"
+  },
+  "groups": [
+    {
+      "name": "advanced",
+      "displayName": "Advanced",
+      "isExpanded": false
+    }
+  ],
+  "minimumAgentVersion": "1.89.1",
+  "instanceNameFormat": "file.coverage full path",
+  "inputs": [
+    {
+        "name": "fileCoveragePath",
+        "type": "filePath",
+        "label": "Source",
+        "defaultValue": "$(build.sourcesdirectory)",
+        "helpMarkDown": "Specifies while data.coverage is located, e.g. /vsts/_work/1/a/TestResults/data.coverage",
+        "required": true
+    },
+    {
+        "name": "BinariesDirectory",
+        "type": "filePath",
+        "label": "Binaries Directory",
+        "defaultValue": "$(build.binariesdirectory)",
+        "helpMarkDown": "Folder where binaries are copied.",
+        "required": true
+    },
+    {
+        "name": "SourcesDirectory",
+        "type": "filePath",
+        "label": "Sources Directory",
+        "defaultValue": "$(build.sourcesdirectory)",
+        "helpMarkDown": "Folder where sources are copied.",
+        "required": true
+    },
+    {
+        "name": "linesCoveredThreshold",
+        "type": "string",
+        "label": "Lines Covered Threshold",
+        "defaultValue": "80",
+        "helpMarkDown": "Sets minimum code coverage threshold which must be overcomed",
+        "required": true
+    },
+    {
+      "name": "ExcludedFiles",
+      "type": "string",
+      "label": "Excluded Files",
+      "defaultValue": "",
+      "helpMarkDown": "Excludes files that match the specified names or paths. Note that FileName can include wildcard characters (* and ?). [/xf <FileName>[ ...]]",
+      "groupName": "advanced"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "codecoveragethresholdTask.js",
+      "argumentFormat": ""
+    }
+  }
+}

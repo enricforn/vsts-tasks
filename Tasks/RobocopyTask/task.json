@@ -7,13 +7,15 @@
   "helpMarkDown": "",
   "category": "Utility",
   "visibility": [
-    "Build",
     "Release"
   ],
+   "runsOn": [
+        "Agent"
+    ],
   "version": {
     "Major": "0",
     "Minor": "0",
-    "Patch": "1"
+    "Patch": "8"
   },
   "groups": [
     {
